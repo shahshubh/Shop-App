@@ -31,8 +31,9 @@
     "redux": "^4.0.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.6",
     "babel-preset-expo": "~8.1.0",
-    "@babel/core": "^7.8.6"
+    "redux-devtools-extension": "^2.13.8"
   },
   "private": true
 }
