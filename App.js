@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { createStore, combineReducers } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
+import ReduxThunk from 'redux-thunk';
 // import { composeWithDevTools } from 'redux-devtools-extension';
 
 import productsReducer from './store/reducers/products';
@@ -20,6 +21,7 @@ const rootReducer = combineReducers({
 
 const store = createStore(
   rootReducer,
+  applyMiddleware(ReduxThunk)
   // composeWithDevTools()
 );
 
