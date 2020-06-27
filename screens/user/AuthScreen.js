@@ -63,28 +63,27 @@ const AuthScreen = props => {
     }, [error]);
 
     const authHandler = async () => {
-        setError(null)
-        setIsLoading(true);
+        let action;
         if(isSignup){
-            try {
-                await dispatch(authActions.signup(
-                    formState.inputValues.email,
-                    formState.inputValues.password
-                ));
-            } catch (error) {
-                setError(error.message)
-            }
+            action = authActions.signup(
+                formState.inputValues.email,
+                formState.inputValues.password
+            );
         } else {
-            try {
-                await dispatch(authActions.login(
-                    formState.inputValues.email,
-                    formState.inputValues.password
-                ));
-            } catch (error) {
-                setError(error.message)
-            }
+            action = authActions.login(
+                formState.inputValues.email,
+                formState.inputValues.password
+            );
         }
-        setIsLoading(false);
+        setError(null);
+        setIsLoading(true);
+        try{
+            await dispatch(action);
+            props.navigation.navigate('Shop');
+        } catch (error) {
+            setError(error.message);
+            setIsLoading(false);
+        }
     };  
 
 
