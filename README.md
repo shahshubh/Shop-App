@@ -14,7 +14,7 @@ An E-commerce shop app in React Native.
 * Log into your account.
 * Add to cart/place order.
 * View Order history.
-* Add/Sell your products.
+* Add/Sell your own products.
 
 ## Demo
 
