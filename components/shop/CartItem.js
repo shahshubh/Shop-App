@@ -41,7 +41,8 @@ const styles = StyleSheet.create({
     quantity: {
         fontFamily: 'open-sans',
         color: '#888',
-        fontSize: 16
+        fontSize: 16,
+        paddingHorizontal: 10,
     },
     mainText: {
         fontFamily: 'open-sans-bold',
