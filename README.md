@@ -10,7 +10,7 @@
 
 An E-commerce shop app in React Native.
 
-# Features
+## Features
 * Log into your account.
 * Add to cart/place order.
 * View Order history.
