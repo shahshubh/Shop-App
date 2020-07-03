@@ -1,11 +1,10 @@
 {
   "expo": {
-    "name": "shop_app",
-    "slug": "shop_app",
+    "name": "Shop App",
+    "slug": "shop-app",
     "platforms": [
       "ios",
-      "android",
-      "web"
+      "android"
     ],
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,7 +12,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#fff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -22,7 +21,20 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "io.github.shahshubh.shop-app",
+      "buildNumber": "1.0.0",
       "supportsTablet": true
+    },
+    "android": {
+      "package": "io.github.shahshubh.shop_app",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#fff"
+      },
+      "permissions": [
+        "WRITE_EXTERNAL_STORAGE"
+      ]
     }
   }
 }
