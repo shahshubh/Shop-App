@@ -8,6 +8,7 @@ import Colors from '../../constants/Colors';
 
 import { LinearGradient } from 'expo-linear-gradient';
 import * as authActions from '../../store/actions/auth';
+import { exp } from 'react-native-reanimated';
 
 const FORM_INPUT_UPDATE = 'FORM_INPUT_UPDATE';
 
@@ -79,7 +80,7 @@ const AuthScreen = props => {
         setIsLoading(true);
         try{
             await dispatch(action);
-            props.navigation.navigate('Shop');
+            // props.navigation.navigate('Shop');
         } catch (error) {
             setError(error.message);
             setIsLoading(false);
@@ -160,7 +161,7 @@ const AuthScreen = props => {
 };
 
 
-AuthScreen.navigationOptions = {
+export const screenOptions  = {
     headerTitle: 'Authenticate',
 }
 
